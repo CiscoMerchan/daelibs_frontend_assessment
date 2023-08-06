@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Assessment Frontend Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a frontend component developed as part of an assessment. The component is a table that displays data with appropriate headers and cells. The data is rendered based on the provided API response and follows the styling guidelines from the Figma design.
 
-## Available Scripts
+## Table Component
 
-In the project directory, you can run:
+The table component is implemented using React and utilizes the `react-table` library for managing table-related functionalities. The component consists of the following files:
 
-### `npm start`
+### table.css
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This file contains the CSS styling for the table component. It defines various styles for the table, including colors, fonts, header styles, and cell styles. The component also handles the background color of the "Actual Score" cells based on the provided data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Table.jsx
 
-### `npm test`
+The `Table.jsx` file is the main component file that renders the table. It imports the necessary data and column configurations from `DATA.json` and `columns.js`, respectively. The component utilizes the `useTable` hook from the `react-table` library to manage the table instance and data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### DATA.json
 
-### `npm run build`
+This file contains the API response data in JSON format. The data includes information about individuals, such as their names, target scores, actual scores, and points.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### columns.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The `columns.js` file defines the column configurations for the table. It specifies the headers and accessors for each column and provides a custom `ActualScoreCell` component to render the "Actual Score" cells. The background color of the "Actual Score" cells is determined based on the provided data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Additional Notes
 
-### `npm run eject`
+- The table displays the data with appropriate headers and cells, and it highlights the "Actual Score" cells with a red background for the first two rows and a green background for the remaining rows. I made this decision because there is no indication of what can make the "Actual Score" red or green. In a working environment, I will ask for clarification, and the logic for handling the background color will be managed in the `ActualScoreCell` component within the `columns.js` file.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please feel free to reach out if you have any questions or need further information about the repository or the assessment.

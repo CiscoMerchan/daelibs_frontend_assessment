@@ -1,0 +1,255 @@
+
+:root {
+    /* Colors */
+    --white: #FFFFFF;
+    --gray: #F8F8F8;
+    --font_color: #5A5A5A;
+    --red: #ED5E61;
+    --green: #59B77A;
+    /* Font */
+    --font_family: Open Sans;    
+  }
+  
+  body {
+    background-color: var(--white);
+    font-family: var(--font_family);
+    color: var(--font_color);
+  }
+  
+  #header {
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.14px;
+  }
+  
+  h2 {
+    color: var(--white);
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-align: center;    
+  }
+  
+  p {
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+  }
+  
+  
+  /* Table styles */
+  .table {
+    width: 1073px;
+    border-collapse: collapse;
+    border-radius: 4px;
+    background: #FFF;
+    margin-top: 30px;
+  }
+  
+  /* Thead styles */
+  .thead-row {
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    color: #F8F8F8;
+    border-radius: 4px 4px 0px 0px;
+    background-color: var(--gray);
+  }
+  
+  /* Align content of the second th (index 1) to flex-start */
+  .thead-row th:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* Align content of other th cells to center */
+  .thead-row th:not(:nth-child(2)) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header {
+    padding: 13px 16px;
+   
+  }
+  
+  .header h3 {
+    color: #5A5A5A;
+    /* H3-Heading 3 */
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.14px;
+  }
+  
+  /* Tbody styles */
+  .tbody {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .trow {
+    height: 48px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+  }
+  
+  .trow:hover {
+    cursor: pointer;
+    background-color: var(--gray);
+  }
+  
+  /* Align content of the second td (index 1) to flex-start */
+  .trow td:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* Align content of other td cells to center */
+  .trow td:not(:nth-child(2)) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cell {
+    padding: 16px;
+  }
+  
+  .cell p {
+    color: #5A5A5A;
+    /* Body Text/Paragraph 1 */
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+  }
+  
+  /* Styling for cells with "Actual Score" data */
+  .cell.actual {
+   
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+ 
+  
+  /* Styling for cells with status information */
+  .cell.actual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cell.actual.rectangle {
+    width: 91px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 4px;
+  }
+  
+  .cell.actual h2 {
+    color: var(--white);
+    /* H2-Heading 2 */
+    font-family: var(--font_family) ;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  /* Set individual column widths */
+  .cell.na {
+    width: 52px;
+  }
+  
+  .cell.name {
+    width: 553px;
+  }
+  
+  .cell.n_a {
+    width: 122px;
+  }
+  
+  .cell.target {
+    width: 121px;
+  }
+  
+  .cell.actual-score {
+    width: 122px;
+  }
+  
+  .cell.points {
+    width: 103px;
+  }
+  
+  .cell p {
+    color: #5A5A5A;
+    /* Body Text/Paragraph 1 */
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+  }
+  
+  /* Styling for cells with "Actual Score" data */
+  .cell.actual {
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cell.actual .rectangle {
+    width: 76px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cell.actual h2 {
+    color: var(--white);
+    /* H2-Heading 2 */
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  
+  /* Red background for the first three rows */
+  .trow:nth-child(-n+2) .cell.actual {
+    background: var(--red);
+  }
+  
+  /* Green background for the rest of the rows */
+  .trow:nth-child(n+3) .cell.actual {
+    background: var(--green);
+  }
